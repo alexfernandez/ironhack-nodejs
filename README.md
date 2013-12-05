@@ -1,16 +1,18 @@
-= IronHack meets node.js
+# IronHack meets node.js
 
-== Workshop de node.js
+## Workshop de node.js
 
-=== Introducción a node.js: 10 minutos
+Guión del workshop.
 
-=== Sesión práctica 1: 30 minutos
+### Introducción a node.js: 10 minutos
 
-=== Memcached: 10 minutos
+### Sesión práctica 1: 30 minutos
 
-=== Sesión práctica 2: 30 minutos
+### Memcached: 10 minutos
 
-=== Continuaciones y eventos: 10 minutos
+### Sesión práctica 2: 30 minutos
 
-=== Sesión práctica 3: 30 minutos
+### Continuaciones y eventos: 10 minutos
+
+### Sesión práctica 3: 30 minutos
 
