@@ -4,12 +4,12 @@ var net = require('net');
 
 var server = net.createServer(function(connection) {
 	console.log('Connection open');
-	connection.write('Hello?\r\n');
+	connection.write('Hello?');
 	connection.on('data', function(data) {
 		if (String(data).trim() != 'hello') {
-			connection.write('ERROR\r\n');
+			connection.write('ERROR');
 		} else {
-			connection.write('world\r\n');
+			connection.write('world');
 			console.log('Connection closed');
 		}
 	});
