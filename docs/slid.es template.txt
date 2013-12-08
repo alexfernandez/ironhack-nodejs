@@ -1,0 +1,565 @@
+<div class="slides">
+    <section>
+        <img style="width: 311.914px; height: 310px; max-height: none; max-width: none;" src="https://s3.amazonaws.com/media-p.slid.es/uploads/alexfernandez/images/179339/logo-ironhack.png">
+        <h2>meets<br>
+</h2>
+<img style="width: 360px; height: 96.9796px; max-height: none; max-width: none;" src="http://nodejs.org/images/logo.png">
+        <br>
+    </section>
+    <section>
+        <h2>Vuestro anfitrión esta tarde</h2>
+<img style="width: 256px; height: 334.644px; max-height: none; max-width: none;" src="https://s3.amazonaws.com/media-p.slid.es/uploads/alexfernandez/images/181217/papi-luci-chiqui.jpg">
+        <br>Desarrollador con 15+ años de experiencia<br>Cacharreador impenitente desde ni se sabe<br>
+        <a href="https://twitter.com/pinchito">@pinchito</a>, <a href="https://github.com/alexfernandez">alexfernandez</a>, <a href="https://mail.google.com/">alejandrofer</a>
+        <br>
+    </section>
+    <section>
+        <h1>Node.js</h1>
+<p>
+        <img style="width: 193px; height: 43.3612px; max-height: none; max-width: none;" src="http://nodejs.org/images/logo.png">
+    </p>
+<img src="http://25.media.tumblr.com/tumblr_ljl5tnkdE01qcf60uo1_500.gif">
+    <br>
+    <h2>Una introducción amable<br>
+</h2>
+</section>
+<section>
+    <h2>JavaScript en el Servidor</h2>
+<p>Motor de Chrome: <a href="https://developers.google.com/v8/intro">V8</a> <a href="http://blogoscoped.com/google-chrome/">(en cómic)</a>
+    </p>
+<p>Adaptado para el servidor por <a href="http://www.nodehispano.com/2011/11/que-es-node-js-nodejs/">Ryan Dahl</a>
+</p>
+<img style="width: 375px; height: 229.072px; max-height: none; max-width: none;" src="http://www.nodehispano.com/wp-content/uploads/ryan_dahl.jpg">
+<p>Software libre (<a href="https://github.com/joyent/node">conoce tu software</a>)</p>
+<p>Soportado por <a href="https://github.com/joyent/node">Joyent</a>
+<br>
+</p>
+</section>
+<section>
+    <h2>Modelo de Ejecución</h2>
+<p>Asíncrono</p>
+<p>No bloqueante (<i>non-blocking</i>)<br>
+</p>
+<p>Activado por eventos&nbsp; (<i>event-driven</i>)</p>
+<p>
+<br>
+</p>
+<p>Servidores similares:</p>
+<p>Python: <a href="http://www.tornadoweb.org/en/stable/">Tornado</a>, <a href="http://twistedmatrix.com/trac/">Twisted</a>
+</p>
+<p>Ruby: <a href="https://github.com/eventmachine/eventmachine">EventMachine</a>
+</p>
+<p>Java: <a href="http://akka.io/">Akka</a>
+</p>
+<p>
+<br>
+</p>
+<p>Fuente: <a href="http://nodejs.org/about/">nodejs.org/about</a>, <a href="http://es.wikipedia.org/wiki/Nodejs">Wikipedia</a>
+<br>
+</p>
+</section>
+<section>
+    <h2>Tres Generaciones</h2>
+<p>
+    <br>
+    </p>
+<p>Procesos: <a href="http://en.wikipedia.org/wiki/Common_Gateway_Interface">CGI</a>, <a href="http://www.mullie.eu/parallel-processing-multi-tasking-php/">PHP core</a>
+</p>
+<p>
+<br>
+</p>
+<p>Hilos: <a href="http://httpd.apache.org/docs/2.2/mod/worker.html">Apache MTM</a>, <a href="http://tutorials.jenkov.com/java-servlets/servlet-concurrency.html">Java Servlets</a>
+<br>
+</p>
+<p>
+<br>
+</p>
+<p>Eventos: <a href="http://www.aosabook.org/en/nginx.html">nginx</a>, node.js<br>
+</p>
+<p>
+<br>
+</p>
+<p>
+<br>
+</p>
+</section>
+<section>
+    <h2>Node.js es Rápido</h2>
+<p>¿Es realmente <a href="http://www.godtic.com/blog/2013/11/12/node-js-rapido-como-el-rayo/">rápido</a>?</p>
+<p>
+    <br>
+</p>
+<p>No en ejecución secuencial</p>
+<p>Sí en ejecución concurrente</p>
+<p>
+<br>
+</p>
+<p>Sólo un hilo de ejecución (sin hilos)<br>
+</p>
+<p>Multi-proceso usando el <a href="http://www.godtic.com/blog/2013/07/27/modo-cluster-para-node-js/">módulo cluster</a>
+</p>
+<p>
+<br>
+</p>
+<p>Node.js es <a href="http://highscalability.com/">escalable</a>
+</p>
+<p>Node.js es muy lineal<br>
+</p>
+</section>
+<section>
+    <h2>Caso de éxito: PayPal</h2>
+<p>Página de Account Overview</p>
+<p>
+    <br>
+</p>
+<p>2 ingenieros durante 4 meses</p>
+<p>Desarrollado el doble de rápido que la versión Java</p>
+<p>33% menos código, 40% menos ficheros<br>
+</p>
+<p>
+<br>
+</p>
+<p>Soporta el doble de peticiones por segundo<br>
+</p>
+<p>Tiempo de respuesta un 35% más bajo<br>
+</p>
+<p>
+<br>
+</p>
+<p>Fuente: <a href="https://www.paypal-engineering.com/2013/11/22/node-js-at-paypal/">Node.js at PayPal</a>
+<br>
+</p>
+</section>
+<section>
+    <h2>Caso de éxito: MediaSmart Mobile</h2>
+<p>Plataforma inicial: un ingeniero durante un año<br>
+</p>
+<p>Plataforma actual: tres ingenieros durante un año</p>
+<p>Sirve anuncios en el móvil<br>
+</p>
+<p>
+<br>
+</p>
+<p>Soporta 10K peticiones/segundo (al menos)</p>
+<p>Escala a 25 servidores (que sepamos)<br>
+</p>
+<p>Latencia &lt; 80 ms</p>
+<p>
+<br>
+</p>
+<p>Fuente: datos internos<br>
+</p>
+</section>
+<section>
+    <section>
+        <h2>Sesión Práctica 1</h2>
+<p>
+        <br>
+    </p>
+<p>Crear proyecto node.js</p>
+<p>
+    <br>
+    </p>
+<p>Añadir a <a href="https://github.com/">GitHub</a>
+</p>
+<p>
+<br>
+</p>
+<p>¡Hola, mundo!<br>
+</p>
+</section>
+<section>
+    <h2>Especificación técnica</h2>
+<p>Servidor de sockets, puerto 1702</p>
+<p>
+    <br>
+</p>
+<p>Al abrir una conexión, pregunta: "Hello?"</p>
+<p>Al escribir "hello" responde "world" y termina</p>
+<p>Cualquier otro mensaje debe resultar en "ERROR"</p>
+<p>
+<br>
+</p>
+<p>
+<b>Nota técnica</b>: ¡cuidado con los retornos de carro!</p>
+<p>Siempre "\r\n".<br>
+</p>
+<p>
+<br>
+</p>
+<p>Doc: <a href="http://nodejs.org/api/net.html">node.js net module</a>
+</p>
+</section>
+<section>
+<h2>Código de muestra<br>
+</h2>
+<pre><code>var net = require('net');<br><br>var server = net.createServer(function(connection) {<br>    console.log('Connection open');<br>    connection.write('Hello?');<br>    connection.on('data', function(data) {<br>        if (String(data).trim() != 'hello') {<br>            connection.write('ERROR');<br>        } else {<br>            connection.write('world');<br>            console.log('Connection closed');<br>        }<br>    });<br>});<br>server.listen(port);<br></code></pre>
+<br>Tiene tres errores<br>
+<br>Código: <a href="https://github.com/alexfernandez/ironhack-nodejs/blob/master/hello-world.js">hello-world.js</a>
+<br>
+</section>
+</section>
+<section>
+    <h1>Memcached</h1>
+<img src="http://boomshadow.net/wp-content/uploads/2012/02/memcached-icon.gif">
+    <br>
+    <br>
+    <h3>La base de datos clave-valor en memoria</h3>
+</section>
+<section>
+    <h2>¿Qué es <a href="http://www.memcached.org/">Memcached</a>?</h2>
+<p>
+    <br>
+</p>
+<p>Creado en <a href="http://www.memcached.org/about">2003</a> por Brad Fitzpatrick para LiveJournal</p>
+<p>
+<br>
+</p>
+<p>NoSQL antes del <i>boom</i> NoSQL</p>
+<p>
+<br>
+</p>
+<p>Clave-valor</p>
+<p>
+<br>
+</p>
+<p>Almacenamiento en memoria</p>
+<p>
+<br>
+</p>
+<p>
+<a href="https://github.com/memcached/memcached/">Software libre</a>, ¡por supuesto!<br>
+</p>
+</section>
+<section>
+    <h2>Cacheo en capas</h2>
+<p>Almacenamiento de valores precalculados</p>
+<p>Respuesta casi inmediata (10 µs)<br>
+</p>
+<img src="https://raw.github.com/alexfernandez/ironhack-nodejs/master/docs/esquema-memcached.png">
+<br>Uno de dos grandes inventos en arquitectura horizontal<br>(junto con el gestor de colas)<br>
+</section>
+<section>
+<h2>API básica Memcached</h2>
+<pre>set [key] [flags] [exptime] [bytes]\r\n<br>[data block]\r\n<br>  \=&gt; STORED<br>  \=&gt; NOT_STORED<br></pre>
+<p>mete un valor en memoria<br>
+</p>
+<pre>get [key]* \r\n<br>  \=&gt; VALUE [key] [flags] [bytes]\r\n<br>      [data block]\r\n<br>      END\r\n<br></pre>extrae un valor (o más) por clave<br>
+<pre>delete [key]<br>  \=&gt; DELETED<br>  \=&gt; NOT_FOUND<br></pre>borra un valor de memoria<br>
+<p>
+<br>
+</p>
+<p>Fuente: <a href="https://github.com/memcached/memcached/blob/master/doc/protocol.txt#L152">protocol.txt</a>
+</p>
+</section>
+<section>
+    <h2>API Completa</h2>
+<p>get, gets<br>
+</p>
+<p>set, add, replace, append, prepend, cas<br>
+</p>
+<p>delete<br>
+</p>
+<p>incr, decr,</p>
+<p>touch<br>
+</p>
+<p>slabs</p>
+<p>stats</p>
+<p>flush_all, version, quit</p>
+<p>
+<br>
+</p>
+<p>Fuente: <a href="https://github.com/memcached/memcached/blob/master/doc/protocol.txt#L152">protocol.txt</a>
+</p>
+</section>
+<section>
+    <section>
+        <h2>Sesión Práctica 2: Simplecached</h2>
+<p>
+        <br>
+    </p>
+<p>Servidor de memcached simplificado</p>
+<p>
+    <br>
+</p>
+<p>get, set, delete</p>
+<p>
+<br>
+</p>
+<p>Protocolo simplificado<br>
+</p>
+<p>
+<br>
+</p>
+<p>Sólo acepta valores de cadena sin saltos de línea<br>
+</p>
+</section>
+<section>
+<h2>Especificación técnica</h2>
+<p>Servidor tipo memcached, puerto 11311</p>
+<pre>set [key] [value]\r\n<br>  \=&gt; STORED<br>  \=&gt; NOT_STORED<br></pre>
+<p>mete un valor en memoria<br>
+</p>
+<pre>get [key]\r\n<br>  \=&gt; VALUE [key] [value]\r\n<br>  \=&gt; END\r\n<br></pre>extrae un valor por clave<br>
+<pre>delete [key]\r\n<br>  \=&gt; DELETED<br>  \=&gt; NOT_FOUND<br></pre>borra un valor de memoria<br>
+<br>
+<p>Cualquier mensaje erróneo debe resultar en ERROR.<br>
+<a href="https://github.com/memcached/memcached/blob/master/doc/protocol.txt#L152">
+</a>
+</p>
+</section>
+<section>
+    <h2>Hints</h2>
+
+<p>
+    <font style="font-size: 24px;">
+        <code>string.trim()</code>
+    </font>: elimina blancos a los lados<br>
+</p>
+<p>
+<font style="font-size: 24px;">
+    <code>string.split(separator)</code>
+</font>: divide una cadena en un array</p>
+<p>
+<font style="font-size: 24px;">
+    <code>array.slice(begin)</code>
+</font>: devuelve un subarray desde begin<br>
+</p>
+<p>
+<font style="font-size: 24px;">
+    <code>array.join(separator)</code>
+</font>: junta un array en un string<br>
+</p>
+<p>
+<br>
+</p>
+<p>Un objeto JavaScript es un mapa asociativo por clave</p>
+<p>
+<br>
+</p>
+<p>El valor puede contener espacios<br>
+</p>
+<p>
+<br>
+</p>
+<p>Manejo de los casos de error<br>
+</p>
+</section>
+</section>
+<section>
+    <h1>Continuaciones</h1>
+<img class="absolute-element" style="width: 534px; height: 395px; max-height: none; max-width: none; position: absolute; z-index: 4; left: 218px; top: 163px;" src="http://2.bp.blogspot.com/-2TL5hw6eHbk/Tkvqk5EGphI/AAAAAAABXZI/RCdIsXd_Kbg/s1600/Super_Mario_Bros_3D_by_Kritter5x.png">
+    <a style="position: absolute; width: 80px; height: 43px; z-index: 4; left: 804px; top: 351px;" class="absolute-element" href="http://www.grandes-artistas.com/2011/11/la-mejores-imagenes-de-super-mario-bros.html">
+        <font style="font-size: 24px;">Fuente</font>
+    </a>
+    <h2 style="position: absolute; width: 560px; height: 68px; z-index: 4; left: 222px; top: 604px;" class="absolute-element">Al infierno y de vuelta<br>
+</h2>
+</section>
+<section>
+    <h1>NPM</h1>
+<img style="width: 684px; height: 400.848px; max-height: none; max-width: none;" src="https://raw.github.com/alexfernandez/ironhack-nodejs/master/docs/modulecounts.png">
+    <br>
+    <h2>Node Package Manager</h2>
+</section>
+<section>
+    <h2>ESTRUCTURA DE UN MÓDULO</h2>
+<p>
+    <br>
+</p>
+<p>punto de entrada: index.js<br>
+</p>
+<p>código: lib/</p>
+<p>documentación: doc/</p>
+<p>binarios: bin/<br>
+</p>
+<p>léeme primero: README.md</p>
+<p>Definición: package.json<br>
+</p>
+</section>
+<section>
+    <h2>cOMANDOS DE NPM</h2>
+<p>
+    <br>
+</p>
+<ul>
+<li>
+<font style="font-size: 24px;">
+<code>npm install</code>
+</font>: instalación de un paquete</li>
+<li>
+<font style="font-size: 24px;">
+<code>npm install</code> -g</font>: instalación global</li>
+<li>
+<font style="font-size: 24px;">
+<code>npm update</code>
+</font>: actualizar paquetes</li>
+<li>
+<font style="font-size: 24px;">
+<code>npm remove</code>
+</font>: eliminar un paquete</li>
+<li>
+<font style="font-size: 24px;">
+<code>npm test</code>
+</font>: correr las pruebas</li>
+</ul>
+<p>
+<br>
+</p>
+<p>Fuente: <a href="https://npmjs.org/doc/misc/npm-index.html">npm-index</a>
+<br>
+</p>
+</section>
+<section>
+<h2>Resolución de Directorios</h2>
+<p>Local:</p>
+<pre><code>            node_modules<br>         ../node_modules<br>      ../../node_modules<br>   ...<br>$HOME/node_modules<br>          ./node_modules<br></code></pre>
+<p>Global:</p>
+<pre><code>{prefix}/lib/node_modules</code></pre>
+<p>donde {prefix} suele ser /usr/local</p>
+<p>
+<br>
+</p>
+<p>Fuente: <a href="https://npmjs.org/doc/files/npm-folders.html">npm-folders</a>
+<br>
+</p>
+</section>
+<section>
+<h2>aNATOMÍA DE UN package.json</h2>
+<pre><font style="font-size: 18px;">{<br>    "name": "simplecached",<br>    "version": "0.0.1",<br>    "description": "Simplified memcached server.",<br>    "contributors": ["Alex Fernández &lt;alexfernandeznpm@gmail.com&gt;"],<br>    "license": "MIT",<br></font><font style="font-size: 18px;"><font style="font-size: 18px;">    "repository": {<br>        "type": "git",<br>        "url": "https://github.com/alexfernandez/simplecached"<br>    },<br></font>    "dependencies": {<br>        "testing": "1.2.x"<br>    },<br>    "keywords" : ["simplecached", "didactic", "memcached", "caching"],<br>    "bin": {<br>        "deployment-run": "bin/deployment.js"<br>    },<br>    "scripts": {<br>        "test": "node test.js"<br>    },<br>}</font><br>    </pre>
+<p>Fuente: <a href="https://npmjs.org/doc/json.html">package.json</a>
+    <br>
+</p>
+</section>
+<section>
+    <h2>Continuaciones</h2>
+<p>
+    <br>
+</p>
+<p>Concepto de programación funcional</p>
+<p>
+<br>
+</p>
+<p>CPS (Continuation-passing Style)</p>
+<p>
+<br>
+</p>
+<p>
+<br>
+</p>
+</section>
+<section>
+    <h2>Callback Hell</h2>
+<p>
+    <br>
+</p>
+<p>Infinitas continuaciones anidadas</p>
+<p>
+<br>
+</p>
+<p>Abuso de las lambdas (funciones anónimas)<br>
+</p>
+</section>
+<section>
+    <h2>Otros modelos</h2>
+<p>Eventos</p>
+<p>Promesas</p>
+<p>Coroutines</p>
+<p>Yield<br>
+</p>
+</section>
+<section>
+    <section>
+        <h2>Sesión práctica 3: Pruebas</h2>
+
+<p>El paquete simplecached&nbsp; contiene un cliente</p>
+<p>
+        <br>
+    </p>
+<p>Instalación:<br>
+</p>
+<pre><code>npm install simplecached</code></pre>
+<p>Se importa con require:</p>
+<pre><code>var Client = require('simplecached').Client;
+
+var client = new Client(port);
+
+client.set(key, value, function(error) {});
+
+client.get(key, function(error, value) {}); <br></code><code></code></pre>
+<p>
+<font style="font-size: 32px;">Fuente: <a href="https://github.com/alexfernandez/simplecached">
+<code>simplecached</code>
+</a>
+</font>
+<br>
+</p>
+<br>
+</section>
+<section>
+    <h2>Especificación técnica</h2>
+<p>
+    <br>
+</p>
+<ul>
+<li>Abrir un socket al puerto 11311</li>
+<li>Elegir una clave al azar y un valor con un espacio<br>
+</li>
+<li>Lanzar el comando 'get [clave]'</li>
+<li>Verificar que no devuelve nada ('END')</li>
+<li>Lanzar 'set [clave] [valor]', devuelve 'STORED'</li>
+<li>Lanzar 'get [clave]', devuelve el &lt;valor&gt; y 'END'</li>
+<li>Lanzar 'delete [clave]', devuelve 'DELETED'</li>
+<li>Lanzar 'get [clave]', devuelve 'END'</li>
+<li>Cerrar el socket<br>
+</li>
+</ul>
+<p>
+<br>
+</p>
+<p>
+<b>Nota técnica</b>: los comandos deben ejecutarse en secuencia<br>
+</p>
+</section>
+<section>
+    <h2>Crear un package.json</h2>
+<p>
+    <br>
+</p>
+<p>Nombre y descripción<br>
+</p>
+<p>
+<br>
+</p>
+<p>Dependencia de simplecached</p>
+<p>
+<br>
+</p>
+<p>Publicar con <font style="font-size: 32px;">
+<code>npm publish </code>
+</font>
+</p>
+<p>
+<br>
+</p>
+<p>Revocar con <font style="font-size: 32px;">
+<code>npm unpublish --force </code>
+</font>
+</p>
+<br>
+</section>
+</section>
+<section>
+    <h2>Gracias</h2>
+<p>
+    <br>
+</p>
+<p>
+<br>
+</p>
+<p>
+<br>
+</p>
+<img style="width: 324px; height: 83.4545px; max-height: none; max-width: none;" src="https://s3.amazonaws.com/media-p.slid.es/uploads/alexfernandez/images/179351/logo-ih-nodejs.png">
+<br>
+</section>
+</div>
