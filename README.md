@@ -6,13 +6,13 @@ Guión del workshop.
 
 ### Introducción a node.js: 10 minutos
 
-### Sesión práctica 1: 30 minutos
+### Sesión práctica 1: 20 minutos
 
 ### Memcached: 10 minutos
 
-### Sesión práctica 2: 30 minutos
+### Sesión práctica 2: 40 minutos
 
-### Continuaciones y eventos: 10 minutos
+### Node Package Manager: 10 minutos
 
 ### Sesión práctica 3: 30 minutos
 
