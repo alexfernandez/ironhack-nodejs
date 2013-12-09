@@ -1,18 +1,18 @@
 # IronHack meets node.js
 
-## Workshop de node.js
+## Node.js Workshop
 
-Guión del workshop.
+Workshop script.
 
-### Introducción a node.js: 10 minutos
+### Introduction to node.js: 10 minutes
 
-### Sesión práctica 1: 20 minutos
+### Practical Session 1: 20 minutes
 
-### Memcached: 10 minutos
+### Memcached: 10 minutes
 
-### Sesión práctica 2: 40 minutos
+### Practical Session 2: 40 minutes
 
-### Node Package Manager: 10 minutos
+### Node Package Manager: 10 minutes
 
-### Sesión práctica 3: 30 minutos
+### Practical Session 3: 30 minutes
 
